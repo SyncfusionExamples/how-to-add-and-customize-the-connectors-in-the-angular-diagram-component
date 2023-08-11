@@ -48,22 +48,7 @@ export class AppComponent {
       offset: { x: 1, y: 0.5 },
     },
   ];
-
-  //   public bezierSegments: BezierSegmentModel = [{
-  //     type: 'Bezier',
-  //     // First control point: an absolute position from the page origin
-  //     point1: {
-  //         x: 100,
-  //         y: 100
-  //     },
-  //     // Second control point: an absolute position from the page origin
-  //     point2: {
-  //         x: 200,
-  //         y: 200
-  //     }
-  // }
-  //];
-
+         
   public decorator = {
     shape: 'Diamond',
     style: { fill: 'Orange', strokeColor: 'Blue', strokeWidth: 2 },
