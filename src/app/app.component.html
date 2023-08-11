@@ -1,0 +1,95 @@
+<button ejs-button (click)="addConnector()">Add Connector</button>
+<button ejs-button (click)="drawConnector()">Draw Connector</button>
+<button ejs-button (click)="editConnector()">Edit Connector</button>
+<button ejs-button (click)="removeConnector()">Remove Connector</button>
+<ejs-diagram #diagram id="diagram" width="1000" height="580px">
+  <e-nodes>
+    <e-node
+      id="terminator"
+      [offsetX]="300"
+      [offsetY]="100"
+      [height]="50"
+      [width]="150"
+      [style]="basicStyle"
+      [shape]="terminator"
+    >
+      <e-node-annotations
+        ><e-node-annotation content="Start"></e-node-annotation
+      ></e-node-annotations>
+    </e-node>
+    <e-node
+      id="process"
+      [offsetX]="300"
+      [offsetY]="200"
+      [height]="50"
+      [width]="200"
+      [style]="basicStyle"
+      [shape]="process"
+      [ports]="ports"
+    >
+      <e-node-annotations
+        ><e-node-annotation content="Process"></e-node-annotation
+      ></e-node-annotations>
+    </e-node>
+    <e-node
+      id="decision"
+      [offsetX]="300"
+      [offsetY]="300"
+      [height]="50"
+      [width]="150"
+      [shape]="decision"
+      [style]="basicStyle"
+      [ports]="ports"
+    >
+      <e-node-annotations
+        ><e-node-annotation content="Decision"></e-node-annotation
+      ></e-node-annotations>
+    </e-node>
+    <e-node
+      id="end"
+      [offsetX]="300"
+      [offsetY]="400"
+      [height]="50"
+      [width]="150"
+      [shape]="terminator"
+      [style]="basicStyle"
+    >
+      <e-node-annotations>
+        <e-node-annotation content="End"></e-node-annotation>
+      </e-node-annotations>
+    </e-node>
+  </e-nodes>
+  <e-connectors>
+    <e-connector
+      id="start"
+      sourceID="terminator"
+      targetID="process"
+      [targetDecorator]="decorator"
+    ></e-connector>
+    <e-connector
+      id="processCon"
+      sourceID="process"
+      targetID="decision"
+    ></e-connector>
+    <e-connector id="decisionCon" sourceID="decision" targetID="end">
+      <e-connector-annotations>
+        <e-connector-annotation content="Yes" [style]="connAnnotStyle">
+        </e-connector-annotation>
+      </e-connector-annotations>
+    </e-connector>
+    <e-connector
+      id="endCon"
+      sourceID="decision"
+      targetID="process"
+      type="Bezier"
+      [segments]="segments"
+      sourcePortID="Port1"
+      targetPortID="Port1"
+    >
+      <e-connector-annotations>
+        <e-connector-annotation content="No" [style]="connAnnotStyle">
+        </e-connector-annotation>
+      </e-connector-annotations>
+    </e-connector>
+  </e-connectors>
+</ejs-diagram>
