@@ -1,11 +1,14 @@
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
 import { ShapeStyleModel, DiagramComponent, DiagramTools, Diagram, ConnectorModel, FlowShapeModel,
-         TextStyleModel, PointPortModel} from '@syncfusion/ej2-angular-diagrams';
+         TextStyleModel, PointPortModel, DiagramModule} from '@syncfusion/ej2-angular-diagrams';
+import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
+  standalone: true,
+  imports: [DiagramModule, ButtonModule],
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
