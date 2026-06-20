@@ -1,6 +1,6 @@
 # How to Add and Customize Connectors in the Angular Diagram Component 
 
-A quick start Angular project that shows how to add connectors in an Angular Diagram. This project includes a code snippet to add a connector programmatically and using the drawing tool. It also includes a code snippet to add different types of connector segments and decorator shapes.
+A quick start Angular project that shows how to add connectors in an [Angular Diagram](https://www.syncfusion.com/angular-components/angular-diagram). This project includes a code snippet to add a connector programmatically and using the drawing tool. It also includes a code snippet to add different types of connector segments and decorator shapes.
 
 Refer to the connector’s documentation on the Syncfusion&reg; Angular Diagram component: 
 https://ej2.syncfusion.com/angular/documentation/diagram/connectors 
